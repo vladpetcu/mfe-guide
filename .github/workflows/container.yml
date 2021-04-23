@@ -29,8 +29,8 @@ jobs:
         run: npm install
       - name: Build app
         run: npm run build
-          env:
-            MFE_PRODUCTION_DOMAIN: ${{ secrets.MFE_PRODUCTION_DOMAIN }}
+        env:
+          MFE_PRODUCTION_DOMAIN: ${{ secrets.MFE_PRODUCTION_DOMAIN }}
       - name: Deploy app build to S3 bucket
         run: aws s3 sync dist s3://${{ secrets.AWS_S3_BUCKET_NAME }}/container/latest
       - name: Update S3 bucket
