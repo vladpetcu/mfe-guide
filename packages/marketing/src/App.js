@@ -6,8 +6,6 @@ import Pricing from "./components/Pricing";
 import Landing from "./components/Landing";
 
 export default () => {
-  console.log(";in marketing app");
-
   return (
     <div>
       <StylesProvider>
