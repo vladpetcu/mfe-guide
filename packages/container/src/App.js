@@ -13,6 +13,7 @@ const generateClassName = createGenerateClassName({
 });
 
 export default () => {
+  console.log("container");
   return (
     <BrowserRouter>
       <StylesProvider generateClassName={generateClassName}>
