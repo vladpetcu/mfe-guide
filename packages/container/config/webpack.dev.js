@@ -8,15 +8,14 @@ const devConfig = {
   mode: "development",
   devServer: {
     port: 8080,
-    historyApiFallback: {
-      index: "index.html",
-    },
+    historyApiFallback: true,
   },
   plugins: [
     new ModuleFederationPlugin({
       name: "container",
       remotes: {
         marketing: "marketingRemote@http://localhost:8081/remoteEntry.js",
+        auth: "authRemote@http://localhost:8082/remoteEntry.js",
       },
       shared: ["react", "react-dom"],
       // shared: packageJson.dependencies,
