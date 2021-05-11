@@ -12,6 +12,8 @@ const generateClassName = createGenerateClassName({
   productionPrefix: "marketing",
 });
 
+console.log("cjadsas");
+
 export default () => {
   return (
     <div>
